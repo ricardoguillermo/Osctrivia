@@ -525,22 +525,22 @@ public class Cancha extends Activity implements OnClickListener {
 		case 1:
 			time_elegido = 40;
 			cantidaderrores = 4;
-			nomarchivo="urubasico";
+			nomarchivo="oscar_basico";
 			break;
 		case 2:
 			time_elegido = 30;
 			cantidaderrores = 3;
-			nomarchivo="urumedio";
+			nomarchivo="osc_medio";
 			break;
 		case 3:
 			time_elegido = 20;
 			cantidaderrores = 2;
-			nomarchivo="urutotal";
+			nomarchivo="oscar_total";
 			break;
 		default:
 			time_elegido = 30;
 			cantidaderrores = 3;
-			nomarchivo="urumedio";
+			nomarchivo="osc_medio";
 			break;
 		}
 

@@ -397,7 +397,7 @@ public class Cancha_para_testar extends Activity implements OnClickListener {
 	// lee un archivo de nombre cuatrorespuestas previamente colocado
 	try
 	{
-	    InputStream fraw = getResources().openRawResource(R.raw.urutotal);//mundiales es el archovo de texto que lee
+	    InputStream fraw = getResources().openRawResource(R.raw.oscar_total);//mundiales es el archovo de texto que lee
 	    int a =0;
 	    BufferedReader brin =  new BufferedReader(new InputStreamReader(fraw));
 	    while ((linea = brin.readLine()) != null)   {

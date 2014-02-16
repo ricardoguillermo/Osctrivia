@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.diguibal.trivia.R;
 
 import android.app.Activity;
 import android.content.Context;
@@ -61,9 +60,9 @@ public class Cancha extends Activity implements OnClickListener {
 	int lecturapondrada;
 
 	// contadores de estadistica
-	int contadoraciertolun, contadorerrorlun;
-	int contadoraciertodepor, contadorerrordepor;
-	int contadoraciertogeo, contadorerrorgeo;
+	int contadoraciertoMac, contadorerrorMac;
+	int contadoraciertodeMan, contadorerrordeMan;
+	int contadoraciertoMpe, contadorerrorMpe;
 	int contadoraciertofut, contadorerrorfut;
 	int contadoraciertolit, contadorerrorlit;
 	int contadoraciertogen, contadorerrorgen;
@@ -605,30 +604,30 @@ public class Cancha extends Activity implements OnClickListener {
 	 */
 	private void guardaraciertos(int acierto, String nivel, String temasortedo) {
 
-		// Estadisticas Lunfardos
-		if (temasortedo.equals("Lun")) {
+		// Estadisticas actriz/actor cornada
+		if (temasortedo.equals("Mac")) {
 			if (acierto == 1) {
-				contadoraciertolun += 1;
+				contadoraciertoMac += 1;
 			} else {
-				contadorerrorlun += 1;
+				contadorerrorMac += 1;
 			}
 		}
 
-		// Estadisticas Deportes
-		if (temasortedo.equals("D")) {
+		// Estadisticas actriz nominada
+		if (temasortedo.equals("Man")) {
 			if (acierto == 1) {
-				contadoraciertodepor += 1;
+				contadoraciertodeMan += 1;
 			} else {
-				contadorerrordepor += 1;
+				contadorerrordeMan += 1;
 			}
 		}
 
-		// Estadisticas Geografia
-		if (temasortedo.equals("G")) {
+		// Estadisticas director
+		if (temasortedo.equals("Mpe")) {
 			if (acierto == 1) {
-				contadoraciertogeo += 1;
+				contadoraciertoMpe += 1;
 			} else {
-				contadorerrorgeo += 1;
+				contadorerrorMpe += 1;
 			}
 		}
 
@@ -690,8 +689,8 @@ public class Cancha extends Activity implements OnClickListener {
 		String errorgen = "0" + contadorerrorgen + "Gen";
 
 		// aciertos y errores deportes
-		String adep = "1" + contadoraciertodepor + "D";
-		String errordep = "0" + contadorerrordepor + "D";
+		String adep = "1" + contadoraciertodeMan + "D";
+		String errordep = "0" + contadorerrordeMan + "D";
 
 		// aciertos y errores futbol
 		String afut = "1" + contadoraciertofut + "F";
@@ -702,12 +701,12 @@ public class Cancha extends Activity implements OnClickListener {
 		String errorlit = "0" + contadorerrorlit + "L";
 
 		// aciertos y errores geografia
-		String ageo = "1" + contadoraciertogeo + "G";
-		String errorgeo = "0" + contadorerrorgeo + "G";
+		String ageo = "1" + contadoraciertoMpe + "G";
+		String errorgeo = "0" + contadorerrorMpe + "G";
 
 		// aciertos y errores lunfardo
-		String alun = "1" + contadoraciertolun + "Lun";
-		String errorlun = "0" + contadorerrorlun + "Lun";
+		String alun = "1" + contadoraciertoMac + "Lun";
+		String errorlun = "0" + contadorerrorMac + "Lun";
 
 		// dificultad de las preguntas
 		// promedios
@@ -735,4 +734,6 @@ public class Cancha extends Activity implements OnClickListener {
 		mp.stop();
 		finish();// termina la activity para no dejar algun residuo
 	}
+	
+	
 }

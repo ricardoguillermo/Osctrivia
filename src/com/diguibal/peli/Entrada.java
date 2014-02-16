@@ -2,7 +2,7 @@ package com.diguibal.peli;
 
 import java.text.SimpleDateFormat;
 
-import com.diguibal.trivia.R;
+
 
 import android.app.Activity;
 import android.content.Context;

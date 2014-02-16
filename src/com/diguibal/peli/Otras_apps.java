@@ -1,7 +1,7 @@
 package com.diguibal.peli;
 
 
-import com.diguibal.trivia.R;
+
 
 import android.app.Activity;
 import android.os.Bundle;
